@@ -1,0 +1,21 @@
+Defination
+==============
+
+Greedy algorithm is the problem solving technique where wheremake 
+the locally optimum choice at each stage & hope to achieve a globally
+optimum.
+
+-> In other word we can say that rather than exploring all the possible ways
+ we can just explore one best ways
+
+-> One example is that to hire a candidate
+there are many rounds like online test--(1)--(1000) write
+                        Interview -------(2 round)------shortlist(100)
+                        hr-------------(3 round)-----shortlist(20)
+                        and hire finally 10
+
+Approch
+=======
+1. mostly they ask for optimization--(min to find or max)
+2.Mostly we also apply sorting first
+3. and dont have any fixed rule or approch like merge sort example

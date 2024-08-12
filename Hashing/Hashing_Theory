@@ -1,0 +1,31 @@
+Hashing
+=========
+->used to convert the one form of data to another
+like name to code etc..
+
+-->Using this hashing there are 2 main data structures available
+which are most importanat
+
+1.Map
+2.Set  
+
+and these map and sets are divides as
+1.Map
+ ->HashMap
+ ->LinkedMap
+ ->TreeMap
+
+2.Set
+ ->HashSet
+ ->LinkedSet
+ ->TreeSet
+
+ HashMap
+ ========
+ (Key,Value)--pair
+ ->Keys are always unique
+ and values are different
+
+ --->Here
+ 1.insert,remove and search are all of them
+ can be performed in ---O(1)-TC

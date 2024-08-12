@@ -1,0 +1,214 @@
+Graphs
+==========
+Network of nodes
+
+->Nodes in binary trees is called VERTEX(vertices)
+
+->and the connecting lines are called edges
+
+eg== Gooogle Maps using internnaly Graphs
+
+Edges 
+=============
+
+1) UNI DIRECTIONAL
+
+A --> B
+
+2) BI DIRECTIONAL   
+
+A --> B
+  <--
+
+2)UN DIRECTED(same since it can move from any direction so called bi directional also)
+
+A ---- B
+
+------------------------------------------------------
+TYPES
+=========
+->Weighted means having a value for edge
+
+1) Weighted Graph +undirected
+          9
+ 1      /-1
+  \   4
+ 1 \ /5
+    6
+
+2)Unweighted + uniderectional
+      9
+     /  
+1   4
+ \ /
+  6
+
+
+Sorting a GRAPH (To represnt and structure)
+================
+1. Adjacency List
+2. Adjacency Matrix
+3. Edge List
+4. 2D Matrix (Implict Graph)
+
+
+1.Adjacency List
+==================
+List of Lists
+
+0   2
+ \ /\
+  1--3
+
+For the above Graph its properties are==
+
+vertices == 4
+Edges == 4
+Undirected Graph
+Unweighted Graph
+
+And represented using adjacency list is
+
+0 vertex --> (1)
+1--> (0,2,3)
+2--> (1,3)
+3--> (1,2)
+
+-->TC == To serach for neighbour element is O(k),k=edges
+
+Storing Techniques
+-------------------
+1. ArrayList<ArrayList>
+2.Array<ArrayList>
+3.HashMap<int,lists>
+
+-->we will be using here Array<ArrayList>
+
+Advantages of using adjacency List
+-----------------------------
+1.No extra info is stored
+2.Optimized
+
+--> Array of ArrayLists<Edges> --> where edges store (source , destination,weight(by default as 1))
+
+
+2)Adjacency Matrix
+========================
+
+0   2
+ \ /\
+  1--3
+
+    0 1 2 3
+    _ _ _ _
+  0|0 1 0 0
+  1|1 0 1 1
+  2|0 1 0 1
+  3|0 1 1 0
+
+
+->If we perform serach operation TC is O(v) -- v=Vertices
+
+3) Edge list
+=================
+
+0   2
+ \ /\
+  1--3
+
+  Edges = {{0,1},{1,2},{1,3},{2,3}}
+            e1    e2     e3    e4
+
+    Syntax = {{source,destination,weight}};
+
+->Mostly not used 
+->used for some problems like sortinf=g edge
+-> and for min Spanning tree type qns
+
+4) Implicit Graphs
+====================
+
+-> arranging in a 2d matrix
+-> example of flood fill qn
+
+Applications of Graphs
+=========================
+1.Google Maps
+2.Social Networks
+3.Delivery Network(shortest cyclic route)
+4. Physics and chemistry
+5. Routing Algorithms
+6. Machine Learning
+7.Dependency Graph
+8.Graph Database
+9. Research
+
+
+2 Type od Graphs
+===================
+
+1.Breadht First Search
+2.Depth first search
+
+1.Breadth First Search
+=======================
+-> Go to immediate neighbours first
+
+->Like level order traversal
+
+  |   |   |  |
+  |   |   |  |
+ l1  l2   l3 l4
+
+         /*
+                 1 --- 3
+                /      | \
+               0       |  5 -- 6
+                \      | /
+                 2-----4
+         */  
+  
+  0 1 2 3 4 5 6 
+  
+
+ 2.Depth first search
+ ====================
+->Keep going to the 1st neighbour
+
+        /*
+                 1 --- 3
+                /      | \
+               0       |  5 -- 6
+                \      | /
+                 2-----4
+         */  
+    
+    0 1 3 4 2 5 6
+
+
+
+ Cycles in Graphs
+ ===================
+->For detecting cycle we use
+
+ 1.For Undirected Graphs 
+   i)DFS
+   ii)BFS
+   iii)DSU(Disjoint set union)
+
+ 2.For Directed Graphs
+   i)DFS
+   ii)BFS
+   iii)Topological sort(Kahns algorithm)
+
+Minimum Spanning Tree (MST)
+============================
+A minimum spanning tree (MST) or minimum weight spanning 
+tree is a subset of the edges of a connected, 
+edge-weighted undirected graph that connects all the 
+vertices together, without any cycles and with the minimum
+possible total edge weight
+
+--> Note==  1.Subgraph,2.No cycle,3.Vertices connected,4.weight(minimum)
+
+

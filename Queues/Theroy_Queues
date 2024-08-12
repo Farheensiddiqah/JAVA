@@ -1,0 +1,13 @@
+First in Forst out - Queue
+FIFO
+--> Structure |Front(exit)_____rear(entry)__|
+Operations
+===========
+1.Add -O(1)
+also called as Enque
+
+2.Remove - O(1)
+also called as Dequeue (which is different from deque)
+
+3.peek - O(1)
+also called as Front

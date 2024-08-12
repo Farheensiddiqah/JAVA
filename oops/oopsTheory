@@ -1,0 +1,205 @@
+objects
+-----------
+-entities in the real world
+classes
+-------
+- group of these entities
+
+Access Modifiers
+================
+Private- within class.
+
+Default- within class,within packages.
+
+Protected- within class,within package,outside package by subclass only
+
+public - within class,within class,outside package by subclass only,outside package.
+
+Getters and Setters
+=====================
+Get : to return the value
+
+set : to modify the value
+
+this: this keyword used to refer to current object.
+
+
+4 pillars of oops
+================
+1.Encapsulation
+2. Abstraction
+3.Inheritance
+4. Polymorphism
+
+1.Encapsulation
+=================
+Defined as the wrapping up of data(properties) and methods(functions) under a single unit.It also implements data hiding.
+
+Constructors
+================
+constructors is a special method which is invoked  automatically at the time of object creation
+
+- Constructors have the same name as class or structure
+-Constructors dont have a return type.(not even a void)
+- Constructors are only called once,at object creation
+- Memory allocation happens when constructor is called.
+
+Types of Constructors
+======================
+1.Non-Parameterized
+----------------
+dont take any arguments and parameters
+
+Student(){
+    System.out.println("Constructor is called");
+}
+
+2.Parameterized
+---------------
+takes arguments and parameters
+
+ Student(String name){
+    this.name=name;
+ }
+
+3.Copy Constructor
+------------------
+If there is 1 object already and want to create an other object then the second object will copy from the first one
+eg: obj1
+    obj2.copy(obj1)
+
+
+
+constructor overloading
+=========================
+->To decide what type of arguments to take then called constructor overloading. 
+-> and example of polymorphism
+
+Shallow Copy and Deep copy
+==========================
+ Shallow Copy-- only copy references(changes reflect)
+
+ Deep Copy-- Changes dont reflect
+
+ Destructors
+ ===============
+ -->In C++ we have to use destuctors to delete 
+ -->but in java it automatically deletes its garbage collectors and no use of destructors
+
+ INHERITANCE
+ ==============
+ Inheritance is when properties and methods of base class are passed on to a derived class.
+
+ Parent Class,Base Class
+      |
+Child Class,Derived Class
+
+Types of Inheritance
+====================
+1.Single Level Inheritance
+--------------------------------
+Base Class -> Derived Class
+
+animal->Mammals
+
+2.Multilevel Inheritace
+------------------------
+Base Class-> Derived Class -> Derived Class
+
+eg:
+ANimals->Mammals->Dog
+
+3. Hirerarchical Inheritance
+----------------------------
+          Base Class
+            |
+    -------------------
+    |                  |
+Derived Class      Derived Class .........etc.
+
+
+4.Hybrid Inheritance
+--------------------
+    Base Class
+            |
+    -------------------
+    |                  |
+Derived Class      Derived Class .........etc.
+   |
+-------------
+|            |
+Derived    Derived
+class       Class
+
+
+5.Multiple Inheritance
+-------------------------
+It is not present in java
+but generally known as combination of above any two
+
+
+55..POLYMORPHISM
+=================
+->Poly means many and mor means forms
+1.Compile Time Polymorphism(static)
+---------------------------
+-> Method overloading :  Multiple functions with the same name but different parametrs
+
+eg:  1+1,  1.5+1.5
+
+2.Run Time Polymorphism (Dynamic)
+------------------------
+-> Method Overriding : Parent and child classes both contain the same function with a different defination.
+
+eg: just definations different like
+Animal
+void eat(x) -> "eat anything"
+|
+Deer
+void eat(X) -> "eats grass"
+
+Packages in JAVA
+==================
+====================
+package is a group of similar types of classes,interface, and sub packages
+types: inbuilt and user
+
+ABSRACTION
+============
+Hiding all the unnecessary details and showing only the important parts to the user.
+
+implemented using : 1.Abstract Classes 2.Interfaces
+1.Abstract Classes
+--------------------
+eg:  abstract class A{
+
+}
+--Cannot create an instance of abtract class
+--Can have abstraction/non-abstract methods
+--Can have constructors
+
+2.Interface
+----------------
+Interface is a blueprint of a class
+uses are
+-> Multiple Inheritance  -> Total abstraction
+--->All methods are public,abstract and without implementation
+----> Used to achieve total abstraction
+-----> Variables in the interfaces are final,public and static
+
+STATIC KEYWORD
+==================
+===================
+Static keyword in java is used to share the same variable or method of a given class.
+-> we can make static for:  1.Properties,2.Functions,3.Blocks,4.Nested Classes
+
+Super Keyword
+=================
+==================
+->like this
+->Super keyword is used to refer immediate parent class object.
+-> To access parents properties
+-> to acess parents function
+-> to acess parents constructor
+
+--> child object can be assigned to a parent reference
