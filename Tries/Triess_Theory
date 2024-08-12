@@ -1,0 +1,33 @@
+Trie Data structure
+==================
+
+also known as prefix and retivel tries
+
+--> many used to store long strings
+
+where used to store the  same elemntes 
+where prefixes are same
+
+if app and apple
+===============
+->then rather than wasting space we can follow
+->         a
+           \
+            p
+             \
+              p --till here 1 word app
+             / 
+            l
+           /
+        e
+
+
+tries
+======
+-> It is a k array tree 
+->beacuse if we take example of binary tree or binary search tree they are almost 2 childs after root.
+-->But here there is no limit.
+
+-->root is always empty
+
+    

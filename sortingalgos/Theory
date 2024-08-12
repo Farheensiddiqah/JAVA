@@ -1,0 +1,60 @@
+Bubble sort
+=============
+find the largest and push it to the end
+//theory came from bubble chemistry lab theory like while when we 
+//boil water then small vapours evaporates and large store inside
+//simillary  with n-1 turns with each turn it will get sorted
+ eg: 321
+ n-1 turns
+
+ 0th turn    1st turn  
+ ---------   --------
+3 2 1        2 1 3
+2 3 1        1 2 3
+2 1 3
+
+
+selection sort
+==============
+it is like just opposite to the bubble sort like in bubble 
+sort we used to find the largest and push it to the end
+->But here we will find the smallest num and push it to the front of array
+
+eg: 4 2 3 5 1
+    1 4 2 3 5
+    1 2 4 3 5
+    1 2 3 4 5
+    1 2 3 4 5
+
+Insertion sort
+==============
+
+idea:  pick an element(from unsorted part) and place it in the right position in sorted part
+
+eg: 5 4 1 3 2
+    4 5 1 3 2
+    1 4 5 3 2
+    1 3 4 5 2
+    1 2 3 4 5
+
+inbuilt sort
+=============
+
+import java.util.Arrays;
+Arrays.sort(arr)
+tc: O(nlogn)
+
+-> Arrays.sort(arr,startindex,endindex)
+
+to reverse an array
+-------------------
+
+import java.util.Collections;
+Arrays.sort(arr,Collections.reverseOrder());
+-> Arrays(arr,si,ei,Collections.reverseOrder());
+
+---->but here for declaring datatype use- Integer arr[]={};
+
+Counting sort
+=============
+if the range is specified then we can use this

@@ -1,0 +1,40 @@
+Order Complexity Analysis
+=========================
+ Amount of space or time taken taken up by an algorithm/code 
+ as function of input size. 
+
+==> HERE ARE TWO CASES
+ ---------------------
+ 1. Linear search - 
+ so for example we have to search an  maximum number in array  then we have to 
+ perform n operations
+ -> so the TC is O(n)-----
+  ---where  n(increases) -> Time(increases)
+
+ 2.when arr is sorted-
+  Here if we take an sorted array then to find the largest number
+  we dont need to traverse whole arr because we know that 
+  it is always at ending of the array
+  -> so, when n(increses) - Time(constant)
+
+Big O Notation
+==============
+Note= we always try to find worst case complexity
+
+eg:  consider:  a(n)^2+b(n)+c
+
+steps : 1.Ignore constants
+        2. Largest term 
+
+--> for example:
+1.Ignore constants
+    (n^2)+(n)+1
+2.Largest term
+    O(n^2) ----Time complexity
+
+There are 3 types in Big
+1. Big O --- mostly used
+2. Big omega
+3. Big Theta
+
+--> 2(^n) --- worst case TC nevver use 

@@ -1,0 +1,348 @@
+JAVA
+=====
+
+bioler code: for every code
+----------------------------
+
+public class classname{
+    public static void main(String args[]){
+}
+}
+
+
+output printing
+----------------
+
+System.out.print("Hello World");  ---- for a single line
+
+System.out.println("Hello World"); ----- ln represents for new line
+
+
+
+Taking input and printing output
+--------------------------------
+
+import java.util.*;
+public class basics{
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String name= sc.nextLine();
+        System.out.println(name);
+    }
+}
+
+
+
+import java.util.*;
+public class basics{
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        // For Strings
+        --------------
+        String name= sc.nextLine();
+        System.out.println(name);
+
+        //For integer
+        -------------
+        int num = sc.nextInt();
+        System.out.println(num);
+
+        //For Float
+        ------------
+        float nums= sc.nextFloat();
+        System.out.println(nums);
+
+    }
+}
+
+
+
+Type conversion
+================
+also implict conversion 
+convert from one data type to another
+which doesnt allow bcz of lossy in info
+
+byte->shhort->int->float->long->double
+
+
+Type Casting
+===========
+
+also known as explicit and narrowing conversion
+-> where we force to convert even there is a loss in changing also
+by just adding the syntax
+
+int marks =(int)(99.99f)
+
+Type promotion in expressions
+=============================
+1.Java automatically promotes each byte,short,or char operand to int when evaluating expression.
+2.if one operand is long,float or double the whole expression is promoted to long,float,or double respectively
+
+
+Functions
+==========
+block of code
+and can reuse repedetly that block of code by calling
+
+Syntax with parameters
+--------------------------
+
+returnType name(type param1,type param2) {
+    //body
+return statement;
+}
+
+
+bionomial coefficient code(ncr formula)
+=======================================
+code logic:
+-> first write the logic of factorial function and and then from ncr formula substitute it 
+
+
+code
+----
+
+import java.util.*;
+
+public class basics{
+    public static int fact(int no) {
+        int f=1;
+        for(int i=1;i<=no;i++) {
+            f=f*i;
+        }
+        return f;
+    }
+    public static int bincoeff(int n,int r) {
+        int fn = fact(n);
+        int fr = fact(r);
+        int fnmr = fact(n-r);
+        int ans = fn/(fr*fnmr);
+        return ans;
+
+    }
+    public static void main(String args[]){
+        System.out.println(bincoeff(5,2));
+    }
+}
+
+output =10  formula = n!/r!*(n-r)!
+
+
+methods
+========
+user and inbuilt method
+
+
+Function overloading
+=====================
+Multiple funcs with the same name but diff parameters
+
+eg= calculator if we take and write multiply we can write same function name multiply and just change he parametrs inside it with diff data types
+
+
+convert from binary to decimal
+================================
+-> binary number system =  0,1
+
+2^0+2^1+2^2+2^3+..........  //convert from bin to dec 
+
+101
+ pow=0
+ dec=0
+lastdigit=1
+ from formula == [dec=dec+[ld*2^pow]]
+
+code
+====
+
+import java.util.*;
+
+public class basics{
+    public static int bintodec(int no) {
+        int pow=0;
+        int dec=0;
+        while(no>0){
+            int ld=no%10;
+            dec=dec+(ld*(int)Math.pow(2, pow));
+            pow++;
+            no=no/10;
+        }
+        return dec;
+    }
+    public static void main(String args[]){
+        System.out.println(bintodec(111));
+    }
+}
+
+
+Butterfly pattern code
+=====================
+
+
+*      *
+**    **
+***  ***
+********
+********
+***  ***
+**    **
+*      *
+
+
+code==
+
+import java.util.*;
+
+public class basics{
+    public static void butterfly(int no){
+        for(int i=1;i<=no;i++) {
+            //star
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //space=2*n-i
+            for(int j=1;j<=2*(no-i);j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=no;i>=1;i--){
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            //space=2*n-i
+            for(int j=1;j<=2*(no-i);j++){
+                System.out.print(" ");
+            }
+            //star
+            for(int j=1;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    public static void main(String args[]){
+        butterfly(4);
+    }
+}
+
+
+Solid Rhombus code
+===================
+
+    *****
+   *****
+  *****
+ *****
+*****
+
+first - spaces + stars 
+spaces = n-i
+stars = from 1to n
+
+code=
+--------
+
+import java.util.*;
+
+public class basics{
+    public static void solidrhombus(int no){
+       for(int i=1;i<=no;i++) {
+        //spaces=n-i
+        for(int j=1;j<=(no-i);j++){
+            System.out.print(" ");
+        }
+        //stars = 2*n-i
+        for(int j=1;j<=no;j++){
+            System.out.print("*");
+        }
+        System.out.println();
+       }
+    }
+    public static void main(String args[]){
+        solidrhombus(5);
+    }
+}
+
+
+Hallow Rhombus
+==============
+import java.util.*;
+
+public class basics{
+    public static void solidrhombus(int no){
+       for(int i=1;i<=no;i++) {
+        //spaces=n-i
+        for(int j=1;j<=(no-i);j++){
+            System.out.print(" ");
+        }
+        //stars = 2*n-i
+        for(int j=1;j<=no;j++){
+            if(i==1||i==no||j==1||j==no){
+                System.out.print("*");
+            }
+            else{
+                System.out.print(" ");
+            } 
+        }
+        System.out.println();
+       }
+    }
+    public static void main(String args[]){
+        solidrhombus(5);
+    }
+}
+
+
+Diamond Code
+============
+
+n=
+4
+   *
+  ***
+ *****
+*******
+*******
+ *****
+  ***
+   *
+
+
+import java.util.*;
+public class basics{
+    public static void main(String args[]) {
+        Scanner sc= new Scanner(System.in);
+        int n= sc.nextInt();
+        for(int i=1;i<=n;i++) {
+            //spaces
+            for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j=1;j<=((2*i)-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        //2nd half
+        for(int i=n;i>=1;i--) {
+             //spaces
+             for(int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j=1;j<=((2*i)-1);j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}

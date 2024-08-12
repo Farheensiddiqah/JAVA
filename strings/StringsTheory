@@ -1,0 +1,19 @@
+Strings are immutable
+
+in input - if we give name=sc.next();
+and input as : Farheen Siddiqah
+ then output as: Farheen
+
+if we want both Farheen Siddiqah then while Scanning use 
+String name;
+name = sc.nextLine();
+
+for finding length
+===================
+//Includes spaces also and the difference is include () for string
+
+
+StringBuilder
+==============
+here since strings are immutable we cannot modify so in this case we can use string builder
+Syntax:  StringBuilder sb= new StringBuilder(" ");
