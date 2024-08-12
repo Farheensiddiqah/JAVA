@@ -1,0 +1,137 @@
+Binary And - &
+=================
+-->simply multiplication
+
+0 & 0 ==0
+0 & 1 ==0
+1 & 0 ==0
+1 & 1 ==1
+eg: 5&6==4
+
+
+Binary Or - |
+===============
+--> Simply addition
+
+0 | 0  = 0
+0 | 1  = 1
+1 | 0  = 1
+1 | 1  = 1
+
+eg: 5|6==7
+
+Binary XOR - ^
+===============
+--> If same then 0 or anyone diff then 1
+
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+ eg:5^6 = 3
+
+Binary ones compliment - ~
+==============================
+ 0 ~ =1
+ 1 ~ =0
+
+ eg: ~5 = 2
+
+Binary left shift - <<
+=======================
+a<<b : shift the a number wuith b no.of  shifts
+and formula: a<<b = a*2^b
+
+Binary right shift - >>
+========================
+a>>b : shift the number of the b number of times and fill it with zeros 
+toward right side
+
+a>>b = a/2^b
+
+Operations:
+============
+1.get the ith bit
+=================
+n&(1<<i) -- if 0 means 0
+            if 1 means 1
+
+2.set the ith bit
+===================
+n|(1<<i) -- changes 0 to 1
+
+3.clear the ith bit
+=====================
+2 steps to be performmed here
+1.Do not operation
+2. then perform and operation
+code:
+------
+int bitmask = ~(1<<i)
+return n & bitmask
+
+4.Update ith bit
+================
+
+if(newBit==0){
+    return clearithBit(n,i);
+} else {
+    return setithbit(n,i);
+}
+
+//or
+
+n=clearbit(n,i);
+int Bitmask=newbit<<i;
+return n|bitmask;
+
+
+5.Clear last i bits
+=================
+-->if we do  and with 0 we can clear bits
+n=1111(15) i=2
+ ==1100
+
+ &((-1)<<i) 
+ ---------
+
+ (-1) and ~0 are equal
+ 111111111(-1) = ~0
+
+ code:
+ int bitmask=(~0)<<i;
+ return n&bitmask;
+
+ 6.Clear range of bits
+ =====================
+ n = 100111010011,  i=2,j=7
+         7    2
+-->so we can do it actually byy and operation with this bits below
+
+1 1 1 1 0 0 0 0 0 0 1 1 
+->now to get this there are the ways which are a|b
+where a = 1 1 1 1 0 0 0 0 0 0 0 0
+      b = 0 0 0 0 0 0 0 0 0 0 1 1
+now to get this a and b the way is: 
+a=(~0)<<(j+1)
+b=(1<<i)-1
+now do a|b
+
+code
+----
+int a = ((~0)<<(j+1));
+int b = (1<<i)-1;
+int bitmask = a|b;
+return n & bitmask;
+
+fast exponention
+=================
+int ans=1;
+while(n>0){
+    if((n & 1) != 0){
+        ans=ans*a;
+    }
+    a=a*a;
+    n=n>>1;
+}
+return ans;

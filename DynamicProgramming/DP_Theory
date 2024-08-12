@@ -1,0 +1,94 @@
+/*
+ * What is DP?
+ * ==========
+ * DP is optimized recursion
+ * 
+ * How to identify DP?
+ * 1. Optimal Problem
+ * (to find min,max,smallest,largest,)
+ * 2.Some choices is given (multiple branches in recursion tree)
+ * eg:like recursion tree of fibnacci choices
+ * 
+ * Definition
+ * ==========
+ * Dynamic Programming is a technique in computer programming that
+ * helps to efficiently solve a class of problems that have 
+ * overlapping subproblems and optimal substructure property.
+ * 
+ * Ways of DP
+ * =========
+ * 1. Memorization
+ * ==================
+ * -> Top down approach
+ * i) Recursion
+ * ii)subproblems-->storage-> reuse
+ * 
+ * 2.Tabulation
+ * ===============
+ * --> Bottom Up approach
+ * --> More efficient
+ * --> Using tables
+
+Tabulation Approach
+-------------------
+1.Create table and initialize(with base case)
+2. Understand meaning for index
+3. fill up from (small to large)
+ 
+7 important questions
+=====================
+1.Fibonacci
+2.0-1 Kanpsack
+3.Unbounded Kanpsack
+4.LCS (Longest Common Subsequences)
+5. Kadanes Algorithm (Array)
+6. Catlan Number
+7. DP on Grid(2D Arrays) 
+
+Number of problems associated
+================================
+i)Fibonacci
+---------------
+1.Climbing Stairs
+2.Number Factors
+3. Min Jumps to reach the end
+4. Min Jumps with cost
+5. House theif
+
+ii)0-1 Kanpsack
+----------------
+1. Subset Sum
+2.Equal Subset sum paritions
+3.Min subset sum difference
+4. Count of Subset sum
+5. Target Sum
+
+iii) Unbounded Knapsack
+----------------------
+1. Rod Cutting
+2 . coin change
+3. min coin change
+4. Max Ribbon Cut
+
+iV) Catlan Number
+------------------
+1. No of BSTs
+2. N paranthesis
+3. Convex Polygons
+4. Disjoint Chords
+5.  Catlan Traingle
+6. Mountain Ranges
+7. Dyck Words
+
+V) LCS (Longest Common Subsequences)
+-----------------------------------
+1. Longest Common Substring
+2. Edit Distance
+3. Box stacking
+4. Longest increasing subsequence
+5. Longest Bitonic Subsequence
+6. Subsequence Pattern Matching
+7. Min add/delete to convert
+8. ONe string to another
+
+

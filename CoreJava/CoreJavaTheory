@@ -1,0 +1,50 @@
+OOPS
+=====
+Methodology to develop and design the programs using class and object
+
+Advs of OOPS
+-----------
+1. Modularity
+2. Reusability
+3. Flexibility
+
+Features in OOPS
+---------------
+1. class
+2. object
+3.Abstraction
+4. Encapsulation
+5. Inheritance
+6. Polymorphisim
+
+class
+======
+class is a model/template/blueprint/prototype for creating objects.
+egg= A thing is made twice before implementing once in our brain(known as class) and other as object
+
+-> A class is a logical entity
+-> A class is a userdefined data type.
+
+Object
+========
+->An Object is a physical entity which exists in real world
+
+characteristics
+-----------------
+1. Identification (Name of the object)
+2.Properties (Variable)
+3.Behaviour (Functions/Methods)
+
+Example of Class
+---------------
+class Student{
+
+}
+How to create an object
+------------------------
+Student s1 = new Student();
+ |       |     |       |
+Name of  |     |      Constructor
+Class    |      --
+     Reference    |
+      Variable    Keyword for dynamic memory allocation

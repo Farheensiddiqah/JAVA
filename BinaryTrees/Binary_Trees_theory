@@ -1,0 +1,14 @@
+Trees
+=========
+
+--> Hirerchical Data Structures
+---> Must have at max only 2 childers
+--> Non Linear
+--> Levels starting from 1 here as our wish
+-->where depth is also can be calculated from level
+
+--> Ancestors means above parents list
+
+PreOrder
+======
+Node->Left->Right
